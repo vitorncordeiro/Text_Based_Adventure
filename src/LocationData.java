@@ -1,0 +1,56 @@
+package code;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class LocationData {
+    private Map<String, Location> locations;
+    public LocationData(){
+
+        this.locations = new HashMap<>(Map.of(
+                /*The String here are the key for locations, and the value are the Object Location. The object location
+                has an HashMap as argument, and I used the Map.of again, for the directions wich any location have.
+                */
+                "camping",
+                new Location("a Safe Camping", new HashMap<>(Map.of('N', "village", 'S', "destroyed tower",
+                'E', "mountain", 'W', "waterfall"
+                ))),
+                "mountain",
+                new Location("a Snowy Mountain", new HashMap<>(Map.of('N', "sunken ship", 'S', "dragon's cave",
+                        'W', "camping"
+                ))),
+                "waterfall",
+                new Location("a beautiful waterfall", new HashMap<>(Map.of('N', "flower garden", 'S', "ancient tree",
+                        'E', "camping"
+                ))),
+                "dragon's cave",
+                new Location("a Dangerous Dragon's Cave", new HashMap<>(Map.of('N', "mountain",
+                        'W', "destroyed tower"
+                ))),
+                "village",
+                new Location("a Small  and Welcoming Medieval Village", new HashMap<>(Map.of( 'S', "camping",
+                        'E', "sunken ship", 'W', "flower garden"
+                ))),
+                "sunken ship",
+                new Location("a sunken ship in the coast", new HashMap<>(Map.of('S', "mountain",
+                        'W', "village"
+                ))),
+                "ancient tree",
+                new Location("An ancient and majestic tree", new HashMap<>(Map.of('N', "waterfall",
+                        'E', "destroyed tower"
+                ))),
+                "destroyed tower",
+                new Location("a completely destroyed mage tower", new HashMap<>(Map.of('N', "camping",
+                        'E', "dragon's cave", 'W', "ancient tree"
+                ))),
+                "flower garden",
+                new Location("a beautiful and peaceful flower garden", new HashMap<>(Map.of( 'S', "waterfall",
+                        'E', "village"
+                )))
+
+        ));
+
+    }
+
+
+}
